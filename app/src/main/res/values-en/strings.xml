@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">football Scoreboard</string>
+    <string name="puff_text">Hufflepuff</string>
+    <string name="raw_text">Ravenclaw</string>
+    <string name="reset_text">Reset</string>
+</resources>
