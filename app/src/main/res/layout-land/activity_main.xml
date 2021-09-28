@@ -1,116 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/football_land"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    >
 
     <TextView
         android:id="@+id/score_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_sides_l"
         android:text="0"
-        android:textSize="@dimen/score_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.664"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <Button
-        android:id="@+id/button_puff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="@color/yellow"
-        android:onClick="AddOneLeft"
-        android:text="@string/puff_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.325"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+        android:textSize="@dimen/score_size" />
 
     <TextView
         android:id="@+id/score_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_sides_l"
         android:text="0"
-        android:textSize="@dimen/score_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.334"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        android:textSize="@dimen/score_size" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/margin_sides_btn_l"
+        android:layout_marginTop="@dimen/margin_top_btn_l"
+        android:backgroundTint="@color/yellow"
+        android:onClick="AddOneLeft"
+        android:text="@string/puff_text" />
+
+    <Button
+        android:id="@+id/button_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:backgroundTint="@color/blue"
         android:onClick="AddOneRight"
+        android:layout_marginRight="@dimen/margin_sides_btn_l"
+        android:layout_marginTop="@dimen/margin_top_btn_l"
         android:text="@string/raw_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.692"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+        android:layout_alignParentRight="true"/>
 
     <ImageView
         android:id="@+id/image_raw"
-        android:layout_width="136dp"
-        android:layout_height="337dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.914"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginRight="@dimen/margin_sides_img"
         app:srcCompat="@drawable/ravenclaw" />
 
     <ImageView
         android:id="@+id/image_puff"
-        android:layout_width="137dp"
-        android:layout_height="327dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_sides_img"
+        android:layout_marginTop="@dimen/margin_top"
         app:srcCompat="@drawable/hafflepuff" />
 
+
     <TextView
-        android:id="@+id/center"
+        android:id="@+id/two_dots_center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=":"
         android:textSize="@dimen/score_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"
+        />
 
     <Button
         android:id="@+id/button_reset"
-        android:layout_width="204dp"
-        android:layout_height="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
         android:onClick="Reset"
         android:text="@string/reset_text"
-        android:textSize="@dimen/reset_size_land"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.842" />
+        android:textSize="@dimen/reset_size" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -3,4 +3,12 @@
     <dimen name="score_size">150sp</dimen>
     <dimen name="reset_size">45dp</dimen>
     <dimen name="reset_size_land">20dp</dimen>
+    <dimen name="margin_sides">55dp</dimen>
+    <dimen name="margin_sides_img">50dp</dimen>
+    <dimen name="margin_sides_l">230dp</dimen>
+    <dimen name="margin_top">105dp</dimen>
+    <dimen name="margin_top_btn">120dp</dimen>
+    <dimen name="margin_sides_btn_l">205dp</dimen>
+    <dimen name="margin_top_btn_l">100dp</dimen>
+    <dimen name="margin_sides_btn">30dp</dimen>
 </resources>
